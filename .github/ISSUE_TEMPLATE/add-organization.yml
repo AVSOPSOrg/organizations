@@ -1,0 +1,104 @@
+name: Add a New Organization
+description: Submit a veteran service organization not yet in our database
+title: "Add: "
+labels: ["new-org"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us expand our coverage. Please provide as much information as you can about this organization.
+
+  - type: input
+    id: org_name
+    attributes:
+      label: Organization Name
+      placeholder: "VFW Post 5678 - City Name"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: parent_org
+    attributes:
+      label: Parent Organization
+      options:
+        - VFW (Veterans of Foreign Wars)
+        - American Legion
+        - DAV (Disabled American Veterans)
+        - FRA (Fleet Reserve Association)
+        - AMVETS
+        - DAR (Daughters of the American Revolution)
+        - SAR (Sons of the American Revolution)
+        - Marine Corps League
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: post_number
+    attributes:
+      label: Post / Chapter / Branch Number
+      placeholder: "5678"
+
+  - type: input
+    id: city_state
+    attributes:
+      label: City and State
+      placeholder: "Indianapolis, IN"
+    validations:
+      required: true
+
+  - type: input
+    id: address
+    attributes:
+      label: Full Address
+      placeholder: "123 Veterans Way, Indianapolis, IN 46204"
+
+  - type: input
+    id: phone
+    attributes:
+      label: Phone
+      placeholder: "(555) 123-4567"
+
+  - type: input
+    id: email
+    attributes:
+      label: Email
+
+  - type: input
+    id: website
+    attributes:
+      label: Website
+      placeholder: "https://..."
+
+  - type: dropdown
+    id: war_period
+    attributes:
+      label: War Era Founded
+      description: The war period this organization was established to serve
+      options:
+        - American Revolution (1775-1783)
+        - War of 1812 (1812-1815)
+        - Mexican-American War (1846-1848)
+        - Civil War (1861-1865)
+        - Spanish-American War (1898)
+        - World War I (1914-1918)
+        - World War II (1939-1945)
+        - Korean War (1950-1953)
+        - Vietnam War (1955-1975)
+        - Gulf War (1990-1991)
+        - War on Terror (2001-Present)
+        - Not sure
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your Role
+      options:
+        - Post Commander / Chapter President
+        - Adjutant / Secretary
+        - Other Officer
+        - Member
+        - State DVA Staff
+        - County Veteran Service Officer
+        - Veteran / Family Member
+        - Other

@@ -1,0 +1,151 @@
+name: Update an Organization
+description: Report updated information for an existing organization listing
+title: "Update: "
+labels: ["update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping keep veteran service data accurate. Please fill out the fields below with the updated information.
+
+  - type: input
+    id: org_name
+    attributes:
+      label: Organization Name
+      description: The name of the organization as listed (e.g., "VFW Post 10" or "American Legion Post 123")
+      placeholder: "VFW Post 1234"
+    validations:
+      required: true
+
+  - type: input
+    id: post_number
+    attributes:
+      label: Post / Chapter / Branch Number
+      placeholder: "1234"
+
+  - type: dropdown
+    id: state
+    attributes:
+      label: State
+      options:
+        - AL - Alabama
+        - AK - Alaska
+        - AZ - Arizona
+        - AR - Arkansas
+        - CA - California
+        - CO - Colorado
+        - CT - Connecticut
+        - DE - Delaware
+        - DC - District of Columbia
+        - FL - Florida
+        - GA - Georgia
+        - HI - Hawaii
+        - ID - Idaho
+        - IL - Illinois
+        - IN - Indiana
+        - IA - Iowa
+        - KS - Kansas
+        - KY - Kentucky
+        - LA - Louisiana
+        - ME - Maine
+        - MD - Maryland
+        - MA - Massachusetts
+        - MI - Michigan
+        - MN - Minnesota
+        - MS - Mississippi
+        - MO - Missouri
+        - MT - Montana
+        - NE - Nebraska
+        - NV - Nevada
+        - NH - New Hampshire
+        - NJ - New Jersey
+        - NM - New Mexico
+        - NY - New York
+        - NC - North Carolina
+        - ND - North Dakota
+        - OH - Ohio
+        - OK - Oklahoma
+        - OR - Oregon
+        - PA - Pennsylvania
+        - RI - Rhode Island
+        - SC - South Carolina
+        - SD - South Dakota
+        - TN - Tennessee
+        - TX - Texas
+        - UT - Utah
+        - VT - Vermont
+        - VA - Virginia
+        - WA - Washington
+        - WV - West Virginia
+        - WI - Wisconsin
+        - WY - Wyoming
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: what_changed
+    attributes:
+      label: What changed?
+      options:
+        - label: Address
+        - label: Phone number
+        - label: Email
+        - label: Website
+        - label: Social media
+        - label: Services / programs
+        - label: Organization is closed / no longer active
+        - label: Other
+
+  - type: input
+    id: new_address
+    attributes:
+      label: New Address
+      placeholder: "123 Main St, City, ST 12345"
+
+  - type: input
+    id: new_phone
+    attributes:
+      label: New Phone
+      placeholder: "(555) 123-4567"
+
+  - type: input
+    id: new_email
+    attributes:
+      label: New Email
+      placeholder: "post1234@vfw.org"
+
+  - type: input
+    id: new_website
+    attributes:
+      label: New Website
+      placeholder: "https://..."
+
+  - type: textarea
+    id: social_media
+    attributes:
+      label: Social Media Links
+      description: Facebook, Instagram, Twitter, YouTube, LinkedIn
+      placeholder: |
+        Facebook: https://facebook.com/...
+        Instagram: https://instagram.com/...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Details
+      description: Any other information about this update
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your Role
+      description: Helps us prioritize and verify updates
+      options:
+        - Post Commander / Chapter President
+        - Adjutant / Secretary
+        - Other Officer
+        - Member
+        - State DVA Staff
+        - County Veteran Service Officer
+        - Veteran / Family Member
+        - Other

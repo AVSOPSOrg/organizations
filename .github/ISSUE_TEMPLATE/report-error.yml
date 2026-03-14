@@ -1,0 +1,34 @@
+name: Report Incorrect Data
+description: Let us know about an error in our data
+title: "Error: "
+labels: ["error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found something wrong? Help us fix it. Every correction helps a veteran find accurate information.
+
+  - type: input
+    id: org_name
+    attributes:
+      label: Organization Name or Slug
+      description: The name or URL slug of the organization with incorrect data
+      placeholder: "VFW Post 1234 or vfw-post-1234-fl"
+    validations:
+      required: true
+
+  - type: textarea
+    id: whats_wrong
+    attributes:
+      label: What's wrong?
+      description: Describe the error you found
+      placeholder: "The address listed is for the old location. The post moved in 2024."
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct_info
+    attributes:
+      label: Correct information
+      description: If you know the correct data, please provide it
+      placeholder: "The correct address is 456 New Veterans Blvd, City, ST 12345"
