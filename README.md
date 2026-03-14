@@ -52,13 +52,13 @@ Each organization is categorized by the war era in which it was founded:
 
 **API**: GitHub serves raw files at:
 ```
-https://raw.githubusercontent.com/avsops/organizations/main/headquarters.csv
+https://raw.githubusercontent.com/AVSOPS/veteran-organizations/main/headquarters.csv
 ```
 
 **In code** (Python example):
 ```python
 import pandas as pd
-vfw = pd.read_csv("https://raw.githubusercontent.com/avsops/organizations/main/vfw/local-posts.csv")
+vfw = pd.read_csv("https://raw.githubusercontent.com/AVSOPS/veteran-organizations/main/vfw/local-posts.csv")
 indiana_vfw = vfw[vfw["state"] == "IN"]
 ```
 
@@ -79,5 +79,5 @@ This data is released under the [Creative Commons Attribution 4.0 International 
 AVSOPS is a 501(c)(3) nonprofit that collects, organizes, and publishes veteran service data so no veteran has to search 50 websites to find help.
 
 - Website: [avsops.com](https://avsops.com)
-- State data (CVSOs): [avsops/state-data](https://github.com/avsops/state-data)
+- State data (CVSOs): [AVSOPS/cvso-state-data](https://github.com/AVSOPS/cvso-state-data)
 - Contact: ed@avsops.com
